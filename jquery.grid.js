@@ -21,11 +21,13 @@ $.fn.grid = function(settings) {
 
   colWidth = settings.col || 60,
   gutterWidth = settings.gutter || 20,
-  lineHeight = settings.line || 20,
+  lineHeight = settings.line || 20;
+  containerTop = container.offset().top;
+  containerLeft = container.offset().left;
 
   gridAttribs = {
     position: 'absolute',
-    top: 0, right: 0, bottom: 0, left: 0,
+    top: containerTop, right: 0, bottom: 0, left: containerLeft,
     zIndex: -1,
     opacity: 0.6
   };
